@@ -1,15 +1,15 @@
 package com.programming.study.makemesmile.data.datasource
 
 import com.programming.study.makemesmile.data.model.RandomDogImageResponse
-import com.programming.study.makemesmile.util.network.NetworkError
 import com.programming.study.makemesmile.util.Result
+import com.programming.study.makemesmile.util.network.NetworkError
 import com.programming.study.makemesmile.util.network.exceptions.HttpException
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.request.get
-import kotlinx.serialization.SerializationException
+import io.ktor.serialization.ContentConvertException
 
-private const val RANDOM_IMAGE_PATH = "api/breeds/image/random"
+private const val RANDOM_IMAGE_PATH = "/api/breeds/image/random"
 
 class MakeMeSmileRemoteDataSource(
     private val client: HttpClient
@@ -19,7 +19,7 @@ class MakeMeSmileRemoteDataSource(
         try {
             val response: RandomDogImageResponse = client.get(RANDOM_IMAGE_PATH).body()
             Result.Success(response)
-        } catch (e: SerializationException) {
+        } catch (e: ContentConvertException) {
             Result.Error(NetworkError.SERIALIZATION)
         } catch (e: HttpException) {
             Result.Error(e.error)
