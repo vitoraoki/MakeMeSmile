@@ -39,11 +39,10 @@ class CustomHttpClient(private val engine: HttpClientEngine) {
     }
 
     private fun HttpClientConfig<*>.validateResponse() {
-        expectSuccess = true
         HttpResponseValidator {
             validateResponse { response ->
                 if (response.status.value >= HttpStatusCode.MultipleChoices.value) {
-                    val networkError = when(response.status) {
+                    val networkError = when (response.status) {
                         HttpStatusCode.BadRequest -> NetworkError.BAD_REQUEST
                         HttpStatusCode.Unauthorized -> NetworkError.UNAUTHORIZED
                         HttpStatusCode.Forbidden -> NetworkError.FORBIDDEN
