@@ -29,11 +29,10 @@ The animation on the front side of the card was implemented using the `Compottie
 ## App Evidences
 Now, the most important part—the videos showcasing the app running on both Android and iOS. (Please note that the video quality may not be optimal, as it was recorded using Android and Android emulators.)
 
-| Android Error | iOS Error |
-|---|---|
-| <video src='https://github.com/user-attachments/assets/e706785e-a0f4-4155-9b26-8fe188524ba4' width=200/> | <video src='https://github.com/user-attachments/assets/a2e58fd9-f4a3-4313-a06e-efb909b4898b' width=200/> |
-
 | Android Success | iOS Success |
 |---|---|
-| <video src='https://github.com/user-attachments/assets/295a6703-8985-4242-b80c-7e84c83d1558' width=200/> | <video src='https://github.com/user-attachments/assets/17821763-dcdc-4c95-8df3-ee5c146440b3' width=200/> |
+| <video src='https://github.com/user-attachments/assets/796b0e97-df7a-4537-a9da-48cbc4b7002d' width=200/> | <video src='https://github.com/user-attachments/assets/0def205a-e19c-4cd3-a6ed-a89265e6b667' width=200/> |
 
+| Android Error | iOS Error |
+|---|---|
+| <video src='https://github.com/user-attachments/assets/0103d5ba-1b29-4d5f-8bb2-7a379ef7270b' width=200/> | <video src='https://github.com/user-attachments/assets/aae46ad6-d770-4da6-9f7d-ce46c7e0b52e' width=200/> |
