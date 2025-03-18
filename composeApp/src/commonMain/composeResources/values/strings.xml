@@ -1,0 +1,5 @@
+<resources>
+    <string name="pick_image_button_label">Make me happy! :)</string>
+    <string name="flip_card_button_success_label">Flip and try again</string>
+    <string name="flip_card_button_error_label">We had a problem :( please try again</string>
+</resources>

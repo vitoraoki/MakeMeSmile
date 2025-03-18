@@ -11,6 +11,10 @@ import io.ktor.serialization.ContentConvertException
 
 private const val RANDOM_IMAGE_PATH = "/api/breeds/image/random"
 
+interface MakeMeSmileDataSource {
+    suspend fun getRandomDogImage(): Result<RandomDogImageResponse, NetworkError>
+}
+
 class MakeMeSmileRemoteDataSource(
     private val client: HttpClient
 ) : MakeMeSmileDataSource {

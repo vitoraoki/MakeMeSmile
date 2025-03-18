@@ -70,6 +70,10 @@ kotlin {
             // Compottie
             implementation(libs.compottie)
             implementation(libs.compottie.resources)
+
+            // Coil
+            implementation(libs.coil.compose)
+            implementation(libs.coil.network.ktor)
         }
 
         iosMain.dependencies {

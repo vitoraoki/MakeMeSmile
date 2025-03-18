@@ -1,8 +1,5 @@
 package com.programming.study.makemesmile.util
 
-import com.programming.study.makemesmile.util.Result.Error
-import com.programming.study.makemesmile.util.Result.Success
-
 sealed class Result<out S, out E> {
     data class Success<out S>(val value: S): Result<S, Nothing>()
     data class Error<out E>(val error: E): Result<Nothing, E>()
