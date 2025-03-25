@@ -118,6 +118,7 @@ private fun FlipCardButton(
         } else {
             stringResource(Res.string.flip_card_button_error_label)
         }
+
         Text(text = text)
     }
 }
@@ -150,17 +151,15 @@ private fun BackCard(
     isImageLoaded: Boolean,
     imagePainter: AsyncImagePainter
 ) {
-    if (isImageLoaded) {
-        Image(
-            modifier = Modifier.fillMaxSize(),
-            painter = imagePainter,
-            contentDescription = null
-        )
+    val painter = if (isImageLoaded) {
+        imagePainter
     } else {
-        Image(
-            modifier = Modifier.fillMaxSize(),
-            painter = painterResource(Res.drawable.sad_dog_icon),
-            contentDescription = null
-        )
+        painterResource(Res.drawable.sad_dog_icon)
     }
+
+    Image(
+        modifier = Modifier.fillMaxSize(),
+        painter = painter,
+        contentDescription = null
+    )
 }
